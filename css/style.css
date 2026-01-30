@@ -1,0 +1,288 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+body {
+    background: #f7f3ee;
+    color: #2f2f2f;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: white;
+}
+
+    .header a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #2f2f2f;
+    }
+
+.info {
+    display: flex;
+    padding: 60px 40px;
+    align-items: center;
+    gap: 40px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #7a9b76;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+#kontakt form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#kontakt input,
+#kontakt textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#kontakt button {
+    background: #7a9b76;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn.call {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    border-radius: 30px;
+    background: #7a9b76;
+    color: white;
+    text-decoration: none;
+    max-width: 320px;
+    margin: 10px auto;
+}
+
+    .btn.call .phone {
+        display: block;
+        font-size: 0.9em;
+        opacity: 0.9;
+        margin-top: 4px;
+    }
+
+@media (max-width: 768px) {
+    .btn.call::before {
+        content: "Tryk for at ringe";
+        display: block;
+        font-size: 0.8em;
+        opacity: 0.8;
+    }
+}
+
+.btn.sms {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    border-radius: 30px;
+    background: #6b8ec4; /* evt. anden farve end ring */
+    color: white;
+    text-decoration: none;
+    max-width: 320px;
+    margin: 10px auto;
+}
+
+    .btn.sms .phone {
+        display: block;
+        font-size: 0.9em;
+        opacity: 0.9;
+        margin-top: 4px;
+    }
+
+.about {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    margin-top: 40px;
+}
+
+.service {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.service-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #7a9b76;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+#galleri {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.ba-card {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+    .ba-card img {
+        width: 100%;
+        height: 350px;
+        object-fit: contain; /* VIGTIGT: viser hele billedet */
+        background: #f7f3ee;
+        border-radius: 16px;
+        cursor: pointer;
+        transition: opacity 0.25s ease;
+    }
+
+.ba-buttons {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+    .ba-buttons button {
+        padding: 0.6rem 1.4rem;
+        border: none;
+        border-radius: 999px;
+        background: #caa472;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+    #lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 12px;
+    }
+
+.prices {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 500px;
+    text-align: center
+}
+
+.prices table {
+    margin: 30px auto;
+    width: 100%;
+    max-width: 500px;
+    text-align: center
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer {
+    background: #7a9b76;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Billedet */
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+}
+
+/* Luk-knap */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.sticky-contact {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background: white;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+.sticky-btn {
+    flex: 1;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+
+    .sticky-btn.call {
+        background: #7a9b76;
+    }
+
+    .sticky-btn.sms {
+        background: #6b8ec4;
+    }
+
+@media (min-width: 768px) {
+    .sticky-contact {
+        display: none;
+    }
+}
+
+body {
+    padding-bottom: 70px;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hundefrisør – Ro & Omsorg</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<div class="sticky-contact">
+    <a href="tel:+45xxxxxxxx" class="sticky-btn call">
+        📞 Ring
+    </a>
+    <a href="sms:+45xxxxxxxx" class="sticky-btn sms">
+        💬 SMS
+    </a>
+</div>
+
+
+<body>
+
+    <header class="header">
+        <div class="logo">🐾 Hundefrisør</div>
+    </header>
+
+    <section class="info">
+        <div class="container">
+            <div class="info-text">
+                <h1>Nyopstartet hundefrisør<br>Klip, vask og trim</h1>
+                <p>Klip og vask</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Behandlinger</h2>
+            <div class="service-grid">
+                <div class="service">✂️ Klipning og trimning, så din hund er pæn og velplejet, når du henter den.</div>
+                <div class="service">🛁 Vask og føn så pelsen er ren, tør og uden knuder.</div>
+                <div class="service">🐾 Negleklip - Din hund får klippet neglene hvis de er blevet lange og du ikke lige har fået gjort det.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galleri">
+        <div class="container">
+            <section id="before-after">
+                <h2>Før og efter</h2>
+
+                <div class="ba-card">
+                    <img id="ba-image"
+                         src="images/hund1-før-test.jpg"
+                         alt="Før billede"
+                         onclick="openLightbox(this.src)">
+
+                    <div class="ba-buttons">
+                        <button onclick="showBefore()">Før</button>
+                        <button onclick="showAfter()">Efter</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+    </div>
+
+    <section class="prices">
+        <div class="container">
+            <h2>Priser</h2>
+            <table>
+                <tr><th>Behandling</th><th>Pris fra</th></tr>
+                <tr><td>Lille hund</td><td>450 kr</td></tr>
+                <tr><td>Mellem hund</td><td>550 kr</td></tr>
+                <tr><td>Stor hund</td><td>650 kr</td></tr>
+                <tr><td>Hvalp</td><td>350 kr</td></tr>
+            </table>
+            <p>Priserne kan variere afhængigt af hundens pels tilstand, størrelse og adfærd.</p>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <h2>Kontakt mig for bestilling af tid</h2>
+            <h2>For at sikre den bedste oplevelse for din hund, aftales tider personligt.</h2>
+
+            <a href="tel:+45xxxxxxxx" class="btn call">
+                📞 Ring for tid<br>
+                <span class="phone">xx xx xx xx</span>
+            </a>
+            <a href="sms:+45xxxxxxxx" class="btn sms">
+                💬 Skriv SMS for tid<br>
+                <span class="phone">xx xx xx xx</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>Om mig</h2>
+            <p>Jeg er en ung kvinde som elsker dyr, og især hunde.</p>
+            <p>Jeg har altid haft en stor passion for at pleje og passe på dem, og derfor har jeg valgt at starte min egen hundefrisørvirksomhed.</p>
+            <p>Mit mål er at skabe et trygt og behageligt miljø for alle hunde, der kommer til mig, så de kan få en positiv oplevelse under deres behandling.</p>
+            <p>Mit fokus er på ro og omsorg, så hver hund føler sig elsket og passet på.</p>
+            <p>Jeg sørger altid for at tilpasse behandlingen efter den enkelte hunds behov og temperament.</p>
+            <p>Jeg har i December 2025 været på et heldags-kursus i hundeklip mm.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p> CVR · 📍 [Kaldred] · 📞 xx xx xx xx · ✉️ kontakt@hundefrisor.dk</p>
+        </div>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+</body>
+</html>
+
+<script>
+    function showBefore() {
+        const img = document.getElementById("ba-image");
+        img.src = "images/hund1-før-test.jpg";
+        img.alt = "Før billede";
+    }
+
+    function showAfter() {
+        const img = document.getElementById("ba-image");
+        img.src = "images/hund1-efter.jpg";
+        img.alt = "Efter billede";
+    }
+
+    function openLightbox(src) {
+        document.getElementById("lightbox").style.display = "flex";
+        document.getElementById("lightbox-img").src = src;
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+
+    function swapImage(src, alt) {
+        img.style.opacity = 0;
+        setTimeout(() => {
+            img.src = src;
+            img.alt = alt;
+            img.style.opacity = 1;
+        }, 120);
+    }
+
+    function showBefore() {
+        swapImage("images/hund1-før-test.jpg", "Før billede");
+    }
+
+    function showAfter() {
+        swapImage("images/hund1-efter.jpg", "Efter billede");
+    }
+</script>
+
+<script>
+    const img = document.getElementById("ba-image");
+
+    let startX = 0;
+    let current = "before";
+
+    img.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    img.addEventListener("touchend", (e) => {
+        const endX = e.changedTouches[0].clientX;
+        const diff = endX - startX;
+
+        if (Math.abs(diff) > 50) { // swipe threshold
+            if (diff < 0) {
+                showAfter();
+                current = "after";
+            } else {
+                showBefore();
+                current = "before";
+            }
+        }
+    });
+</script>
